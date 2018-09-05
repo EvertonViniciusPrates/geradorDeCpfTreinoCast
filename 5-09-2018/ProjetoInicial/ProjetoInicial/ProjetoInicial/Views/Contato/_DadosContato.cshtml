@@ -1,0 +1,11 @@
+﻿@model ProjetoInicial.Models.ContatoModel
+
+<tr>
+    <td>@Html.DisplayTextFor(x => x.Id)</td>
+    @Html.HiddenFor(x => x.Id)
+    <td>@Html.TextBoxFor(x => x.Tipo)</td>
+    @Html.ValidationMessageFor(model => model.Tipo)
+    <td>@Html.TextBoxFor(x => x.Contato)</td>
+    @Html.ValidationMessageFor(model => model.Contato)
+</tr>
+

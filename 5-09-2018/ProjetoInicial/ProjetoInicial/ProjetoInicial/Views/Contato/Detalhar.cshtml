@@ -1,0 +1,23 @@
+﻿@model ProjetoInicial.Models.ContatoModel
+@{
+    ViewBag.Title = "Detalhar";
+}
+
+<h2>Detalhar</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">@Html.LabelFor(x => x.Tipo)</th>
+            <th scope="col">@Html.LabelFor(x => x.Contato)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Html.DisplayFor(x => x.Id)</td>
+            <td>@Html.DisplayFor(x => x.Tipo)</td>
+            <td>@Html.DisplayFor(x => x.Contato)</td>
+        </tr>
+    </tbody>
+</table>

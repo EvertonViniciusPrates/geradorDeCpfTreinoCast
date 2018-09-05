@@ -1,0 +1,27 @@
+﻿@model ProjetoInicial.Models.ContatoModel
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Detalhar</h2>
+@using (Html.BeginForm("Salvar", "Contato", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.Partial("_DadosContato",Model)
+        </tbody>
+    </table>
+    <input type="submit" value="Salvar" />
+}
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+}

@@ -1,0 +1,30 @@
+﻿@model List<ProjetoInicial.Models.ContatoModel>
+@{ 
+    ViewBag.tittle = "Contato";
+    var nome = "Teste";
+}
+<h2>@ViewBag.Tittle</h2>
+<h2>@ViewBag.message</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Contato</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(x => contact.Tipo)</td>
+                <td>@Html.DisplayFor(x => contact.Contato)</td>
+                <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = contact.Id })
+                    @Html.ActionLink("Vizualizar", "Detalhar", new { id = contact.Id })
+                    @Html.ActionLink("Excluir", "Excluir", new { id = contact.Id })
+                </td>
+            </tr>
+        }
+        @Html.ActionLink("Cadastrar", "Editar")
+    </tbody>
+</table>

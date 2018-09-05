@@ -1,0 +1,21 @@
+﻿@model ProjetoInicial.Models.ContactModel
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<table class="table">
+    <tr>
+        <td>@Html.LabelFor(model => model.Id)</td>
+        <td>@Html.DisplayTextFor(model => model.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Type)</td>
+        <td>@Html.DisplayTextFor(model => model.Type)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Contact)</td>
+        <td>@Html.DisplayTextFor(model => model.Contact)</td>
+    </tr>
+</table>
