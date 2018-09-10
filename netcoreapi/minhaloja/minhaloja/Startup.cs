@@ -42,9 +42,9 @@ namespace minhaloja
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors();
+            app.UseCors(builder => 
+            builder.WithOrigins("http://localhost:4200"));
             app.UseMvcWithDefaultRoute();
-            app.UseCors(builder => builder.WithOrigins("localhost"));
         }
     }
 }
